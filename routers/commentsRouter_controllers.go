@@ -7,68 +7,84 @@ import (
 
 func init() {
 
-	beego.GlobalControllerRouter["lcc/blog/controllers:UserController"] = append(beego.GlobalControllerRouter["lcc/blog/controllers:UserController"],
+	beego.GlobalControllerRouter["lcc/blog/controllers:NoteController"] = append(beego.GlobalControllerRouter["lcc/blog/controllers:NoteController"],
 		beego.ControllerComments{
-			Method: "Del",
-			Router: `/del`,
+			Method:           "Edit",
+			Router:           `/edit`,
 			AllowHTTPMethods: []string{"post"},
-			MethodParams: param.Make(),
-			Params: nil})
+			MethodParams:     param.Make(),
+			Params:           nil})
+
+	beego.GlobalControllerRouter["lcc/blog/controllers:NoteController"] = append(beego.GlobalControllerRouter["lcc/blog/controllers:NoteController"],
+		beego.ControllerComments{
+			Method:           "Save",
+			Router:           `/save`,
+			AllowHTTPMethods: []string{"post"},
+			MethodParams:     param.Make(),
+			Params:           nil})
 
 	beego.GlobalControllerRouter["lcc/blog/controllers:UserController"] = append(beego.GlobalControllerRouter["lcc/blog/controllers:UserController"],
 		beego.ControllerComments{
-			Method: "Get",
-			Router: `/get`,
+			Method:           "Del",
+			Router:           `/del`,
+			AllowHTTPMethods: []string{"post"},
+			MethodParams:     param.Make(),
+			Params:           nil})
+
+	beego.GlobalControllerRouter["lcc/blog/controllers:UserController"] = append(beego.GlobalControllerRouter["lcc/blog/controllers:UserController"],
+		beego.ControllerComments{
+			Method:           "Get",
+			Router:           `/get`,
 			AllowHTTPMethods: []string{"get"},
-			MethodParams: param.Make(),
-			Params: nil})
+			MethodParams:     param.Make(),
+			Params:           nil})
 
 	beego.GlobalControllerRouter["lcc/blog/controllers:UserController"] = append(beego.GlobalControllerRouter["lcc/blog/controllers:UserController"],
 		beego.ControllerComments{
-			Method: "GetDetails",
-			Router: `/getdetails`,
+			Method:           "GetDetails",
+			Router:           `/getdetails`,
 			AllowHTTPMethods: []string{"get"},
-			MethodParams: param.Make(),
-			Params: nil})
+			MethodParams:     param.Make(),
+			Params:           nil})
 
 	beego.GlobalControllerRouter["lcc/blog/controllers:UserController"] = append(beego.GlobalControllerRouter["lcc/blog/controllers:UserController"],
 		beego.ControllerComments{
-			Method: "Login",
-			Router: `/login`,
+			Method:           "Login",
+			Router:           `/login`,
 			AllowHTTPMethods: []string{"post"},
-			MethodParams: param.Make(),
-			Params: nil})
+			MethodParams:     param.Make(),
+			Params:           nil})
 
 	beego.GlobalControllerRouter["lcc/blog/controllers:UserController"] = append(beego.GlobalControllerRouter["lcc/blog/controllers:UserController"],
 		beego.ControllerComments{
-			Method: "Logout",
-			Router: `/logout`,
+			Method:           "Logout",
+			Router:           `/logout`,
 			AllowHTTPMethods: []string{"get"},
-			MethodParams: param.Make(),
-			Params: nil})
+			MethodParams:     param.Make(),
+			Params:           nil})
 
 	beego.GlobalControllerRouter["lcc/blog/controllers:UserController"] = append(beego.GlobalControllerRouter["lcc/blog/controllers:UserController"],
 		beego.ControllerComments{
-			Method: "Register",
-			Router: `/register`,
+			Method:           "Register",
+			Router:           `/register`,
 			AllowHTTPMethods: []string{"post"},
-			MethodParams: param.Make(),
-			Params: nil})
+			MethodParams:     param.Make(),
+			Params:           nil})
 
 	beego.GlobalControllerRouter["lcc/blog/controllers:UserController"] = append(beego.GlobalControllerRouter["lcc/blog/controllers:UserController"],
 		beego.ControllerComments{
-			Method: "UpdatedInfo",
-			Router: `/updatedInfo`,
+			Method:           "UpdatedInfo",
+			Router:           `/updatedInfo`,
 			AllowHTTPMethods: []string{"post"},
-			MethodParams: param.Make(),
-			Params: nil})
+			MethodParams:     param.Make(),
+			Params:           nil})
 
 	beego.GlobalControllerRouter["lcc/blog/controllers:UserController"] = append(beego.GlobalControllerRouter["lcc/blog/controllers:UserController"],
 		beego.ControllerComments{
-			Method: "UpdatedPwd",
-			Router: `/updatedPwd`,
+			Method:           "UpdatedPwd",
+			Router:           `/updatedPwd`,
 			AllowHTTPMethods: []string{"post"},
-			MethodParams: param.Make(),
-			Params: nil})
+			MethodParams:     param.Make(),
+			Params:           nil})
 
 }
